@@ -1,0 +1,32 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-standard"],
+  "ignoreFiles": ["**/*.ts", "**/*.tsx"],
+  "rules": {
+    "annotation-no-unknown": [
+      true,
+      {
+        "ignoreAnnotations": ["default"]
+      }
+    ],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["function", "if", "each", "include", "mixin", "use"]
+      }
+    ],
+    "color-function-notation": "legacy",
+    "function-no-unknown": [true, { "ignoreFunctions": ["lighten", "darken", "map-merge"] }],
+    "import-notation": "string",
+    "no-descending-specificity": null,
+    "number-max-precision": 3,
+    "scss/no-global-function-names": null,
+    "selector-class-pattern": "^([a-z][a-z0-9]*)((__|_|-|--)[a-z0-9]+)*$",
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["deep", "global"]
+      }
+    ]
+  }
+}
+
