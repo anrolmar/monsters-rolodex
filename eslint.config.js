@@ -85,7 +85,7 @@ export default tseslint.config(
       ],
       'import/prefer-default-export': 'off',
 
-      'max-len': ['warn', { code: 100, ignoreComments: true, ignoreUrls: true }],
+      'max-len': ['warn', { code: 120, ignoreComments: true, ignoreUrls: true }],
       'no-console': 'off',
       'no-debugger': 'off',
       'no-shadow': 'off',
