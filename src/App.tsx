@@ -2,10 +2,10 @@ import './App.scss';
 
 import { Component, ReactNode } from 'react';
 
-type Monster = {
-  id: number;
-  name: string;
-};
+import CardList from './components/card-list/card-list.component';
+import { Monster } from './types';
+import SearchBox from './components/search-box/search-box.component';
+
 interface StateComponent {
   monsters: Monster[];
   searchField: string;
@@ -44,17 +44,12 @@ class App extends Component<object, StateComponent> {
     return (
       <>
         <div className="App">
-          <input
+          <SearchBox
             className="search-box"
-            type="search"
-            placeholder="search monsters"
-            onChange={(event) => this.handleSearchChanged(event)}
+            onChangeHandler={(event) => this.handleSearchChanged(event)}
+            placeHolder="search monsters"
           />
-          {filteredMonsters.map((monster) => (
-            <div key={monster.id}>
-              <h1>{monster.name}</h1>
-            </div>
-          ))}
+          <CardList monsters={filteredMonsters} />
         </div>
       </>
     );
