@@ -3,8 +3,8 @@ import './App.scss';
 import { Component, ReactNode } from 'react';
 
 import CardList from './components/card-list/card-list.component';
-import { Monster } from './types';
 import SearchBox from './components/search-box/search-box.component';
+import { Monster } from './types';
 
 interface StateComponent {
   monsters: Monster[];
@@ -44,8 +44,9 @@ class App extends Component<object, StateComponent> {
     return (
       <>
         <div className="App">
+          <h1 className="app-title">Monster Rolodex</h1>
           <SearchBox
-            className="search-box"
+            className="monsters-search-box"
             onChangeHandler={(event) => this.handleSearchChanged(event)}
             placeHolder="search monsters"
           />

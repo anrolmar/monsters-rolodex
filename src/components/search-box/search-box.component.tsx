@@ -1,5 +1,7 @@
 import { Component, ReactNode } from 'react';
 
+import './search-box.styles.scss';
+
 interface SearchBoxProps {
   className: string;
   onChangeHandler: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -16,7 +18,7 @@ class SearchBox extends Component<SearchBoxProps, SearchBoxState> {
   render(): ReactNode {
     return (
       <input
-        className={this.props.className}
+        className={`search-box ${this.props.className}`}
         type="search"
         placeholder={this.props.placeHolder}
         onChange={(event) => this.props.onChangeHandler(event)}
